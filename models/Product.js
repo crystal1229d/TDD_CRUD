@@ -10,7 +10,7 @@ const productSchema = new mongoose.Schema({
         required: true
     },
     price: {
-        type: Number.EPSILON,
+        type: Number,
         default: 0
     }
 })

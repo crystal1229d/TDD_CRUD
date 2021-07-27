@@ -1,3 +1,5 @@
-exports.hello = (req, res) => {
-    res.send('Hello');
+const productModel = require('../models/Product');
+
+exports.createProduct = () => { 
+    productModel.create();
 };

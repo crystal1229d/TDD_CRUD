@@ -29,6 +29,11 @@ app.get('/', (req, res) => {
 
 app.listen(PORT);
 
+// Custom Error Handler (four params)
+app.use((error, req, res, next) => {
+    res.status(500).json({ message: error.message })
+});
+
 console.log(`Running on Port ${PORT}`);
 
 module.exports = app;
